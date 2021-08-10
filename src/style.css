@@ -46,6 +46,8 @@ header .search input {
   height: 70px;
   border: solid var(--sectionColor) 2px;
   background-color: var(--textColor);
+  font-size: 2em;
+  color: white;
 }
 
 header .search input::placeholder {
