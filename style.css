@@ -88,6 +88,10 @@ main section h1 {
   color: var(--textColor);
 }
 
+main section a{
+  text-decoration: none;
+}
+
 footer {
   background-color: var(--lightGreen);
   height: 30vh;
