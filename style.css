@@ -37,34 +37,38 @@ header .logo {
   color: var(--textColor);
 }
 
-header .search {
+main .search {
   margin: 0 50px;
 }
 
-header .search input {
-  width: 500px;
-  height: 70px;
+main .search input {
+  width: 800px;
+  height: 100px;
   border: solid var(--sectionColor) 2px;
   background-color: var(--textColor);
   font-size: 2em;
   color: white;
 }
 
-header .search input::placeholder {
+main .search input::placeholder {
   color: white;
+  text-align: center;
+  animate: infinite jackInTheBox;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     ". . ."
     ". . ."
-    ". . .";
-  /*   background: coral; */
-  height: 100vh;
+    ". . ."; */
+/*   background: coral; */
+  height: 50vh;
 }
 
 main section {
@@ -88,17 +92,13 @@ main section h1 {
   color: var(--textColor);
 }
 
-main section a{
-  text-decoration: none;
-}
-
 footer {
   background-color: var(--lightGreen);
   height: 30vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 950px 0;
+  margin: 100px 0;
 }
 
 footer logo {
