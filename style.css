@@ -1,121 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sofia+Sans+Condensed:wght@600&display=swap");
+
 :root {
-  --lightGreen: #53b8bb;
-  --textColor: #003638;
-  --sectionColor: #f3f2c9;
-  --heading: "Gabriela", serif;
-  --sectionText: "Oswald", sans-serif;
+  --textColor: #303742;
+  --heading: "Bebas Neue", cursive;
+  --heading2: "Sofia Sans Condensed", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #055052;
-  height: 100vh;
-  overflow: hidden;
-}
-
-header {
-  background-color: var(--lightGreen);
+section {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: 15vh;
+  flex-direction: column;
 }
 
-header .logo {
-  margin: 0 50px;
-  font-family: var(--heading);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 61px;
+#search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex: 1;
+}
 
+#search-form {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px grey;
+}
+
+#search-input {
+  flex-grow: 1;
+  border: none;
+  margin-right: 8px;
+  font-size: 16px;
   color: var(--textColor);
 }
 
-main .search {
-  margin: 0 50px;
-}
-
-main .search input {
-  width: 800px;
-  height: 100px;
-  border: solid var(--sectionColor) 2px;
+#search-button {
+  border: none;
   background-color: var(--textColor);
-  font-size: 2em;
-  color: white;
-}
-
-main .search input::placeholder {
-  color: white;
-  text-align: center;
-  animate: infinite jackInTheBox;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-/*   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . ."; */
-/*   background: coral; */
-  height: 42vh;
-}
-
-main section {
-  background-color: var(--sectionColor);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30vh;
-  width: 30vw;
-  margin: 100px 10px;
-  border-radius: 60px;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-main section h1 {
-  font-family: var(--sectionText);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 71px;
-  color: var(--textColor);
-}
-
-footer {
-  background-color: var(--lightGreen);
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 100px 0;
-}
-
-footer logo {
-  display: flex;
-  align-items: center;
-}
-
-footer logo img {
-  width: 10em;
-}
-
-footer logo h1 {
-  color: var(--textColor);
+h1 {
   font-family: var(--heading);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 61px;
+  color: var(--textColor);
+  text-align: center;
+  font-size: 10em;
+}
+
+/* Basic styles for search suggestions dropdown */
+#search-suggestions {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  background-color: white;
+  box-shadow: 0px 0px 5px grey;
+}
+
+/* Styles for search suggestion list items */
+#search-suggestions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for selected search suggestion */
+#search-suggestions .selected {
+  background-color: #f1f1f1;
 }
